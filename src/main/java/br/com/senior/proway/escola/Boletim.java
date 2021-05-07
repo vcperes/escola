@@ -9,6 +9,7 @@ import java.util.ArrayList;
  * {@link Aluno}. Para cada período é calculada a média das provas que resulta na
  * nota do Boletim.
  * 
+ * Correção commit
  * @author Vitor Peres
  * 
  */
