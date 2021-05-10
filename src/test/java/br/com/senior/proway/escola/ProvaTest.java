@@ -5,6 +5,10 @@ import static org.junit.Assert.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import br.com.senior.proway.escola.model.Aluno;
+import br.com.senior.proway.escola.model.Materia;
+import br.com.senior.proway.escola.model.Prova;
+
 public class ProvaTest {
 
 	static Prova prova;

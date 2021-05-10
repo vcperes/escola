@@ -1,4 +1,4 @@
-package br.com.senior.proway.escola;
+package br.com.senior.proway.escola.model;
 
 import java.util.ArrayList;
 
@@ -18,7 +18,7 @@ public class Boletim {
 	private Integer periodo;
 	private Double media;
 	private ArrayList<Prova> provas;
-	
+
 	/**
 	 * Cria um novo Boletim
 	 * 
@@ -34,19 +34,7 @@ public class Boletim {
 		this.media = 0.0;
 		this.provas = new ArrayList<Prova>();
 	}
-	
-	/**
-	 *Calcula a média ponderada das provas. 
-	 */
-	public void calcularMedia(){
-		
-		this.media = 0.0;
-		for (Prova prova : provas) {
-			this.media += prova.getNota();
-		}
-		this.setMedia(this.media/provas.size());
-	}
-	
+
 	/**
 	 * Aluno do Boletim.
 	 * 
@@ -73,41 +61,21 @@ public class Boletim {
 	 * @return
 	 */
 	public Double getMedia() {
-		this.calcularMedia();
 		return media;
 	}
-	
+
 	public void setMedia(Double mediaRecebida) {
 		this.media = mediaRecebida;
 	}
 	/**
-	 * Adiciona uma avaliação ao boletim.
-	 * @param prova
+	 * Retorna todas as provas.
+	 * 
+	 * @return ArrayList<Prova>
 	 */
 	public ArrayList<Prova> getProvas() {
 		return this.provas;
 	}
 	
-	public void addProva(Prova prova) {
-		provas.add(prova);
-	}
 	
-	/**
-	 * Remove uma avaliação do Boletim.
-	 * 
-	 * Ao remover a Prova, a média é recalculada.
-	 * @param index
-	 */
-	public void removeProva(int index) {
-		provas.remove(index);
-	}
-	/**
-	 * Remove todas as avaliações do Boletim.
-	 * 
-	 * Ao remover
-	 */
-	public void removeTodasProvas() {
-		provas.clear();
-	}
-
+	
 }

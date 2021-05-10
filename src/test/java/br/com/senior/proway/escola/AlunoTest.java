@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import br.com.senior.proway.escola.model.Aluno;
+
 public class AlunoTest {
 
 	@Test

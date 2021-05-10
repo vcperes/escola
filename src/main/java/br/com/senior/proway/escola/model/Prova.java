@@ -1,4 +1,4 @@
-package br.com.senior.proway.escola;
+package br.com.senior.proway.escola.model;
 
 /**
  * A avaliação do desempenho do {@link Aluno} em uma Matéria.
