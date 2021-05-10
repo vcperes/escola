@@ -30,9 +30,10 @@ public class BoletimControllerTest {
 	@Test
 	public void testAddProva() throws Exception {
 		controller.removeTodasProvas();
+		controller.addBoletim();
 		Materia materia = new Materia();
 		Prova prova = new Prova(controller.getBoletim().getPeriodo(), controller.getBoletim().getAluno(), materia);
-		prova.setNota(0.0);
+		prova.setNota(7.0);
 		controller.addProva(prova);
 		assertEquals(1, controller.getBoletim().getProvas().size());
 	}

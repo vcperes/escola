@@ -1,34 +1,29 @@
 package br.com.senior.proway.escola.model;
 
-import java.util.ArrayList;
+import br.com.senior.proway.escola.persistence.ArrayListPersistenceProva;
 
 public class ProvaDAO {
+
+	ArrayListPersistenceProva db;
 	
-	Boletim boletim;
+	public ProvaDAO(ArrayListPersistenceProva db) {
+		this.db = db;
+	}
+
+	public void removeAll() {
+		db.removeAll();
+	}
+
+	public void remove(Integer index) {
+		db.remove(index);	
+	}
+
+	public Prova add(Prova prova) {
+		return db.add(prova);
+	}
 	
-	public ProvaDAO(Boletim boletim) {
-		this.boletim = boletim;
+	public Prova get(int index) {
+		return db.get(index);
 	}
-
-	public void add(Prova prova) {
-		ArrayList<Prova> provas = boletim.getProvas();
-		provas.add(prova);
-		
-	}
-
-	public void remove(int index) {
-		try {
-			ArrayList<Prova> provas = boletim.getProvas();
-			provas.remove(index);	
-		}catch(Exception e) {
-			System.out.println("Prova não existe, erro: " + e.getMessage());
-		}
-	}
-
-	public void removeTodas() {
-		ArrayList<Prova> provas = boletim.getProvas();
-		provas.clear();
-	}
-
 	
 }

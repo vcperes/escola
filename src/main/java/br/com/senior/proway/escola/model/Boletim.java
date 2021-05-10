@@ -14,6 +14,7 @@ import java.util.ArrayList;
  * 
  */
 public class Boletim {
+	private Integer id;
 	private Aluno aluno;
 	private Integer periodo;
 	private Double media;
@@ -34,7 +35,13 @@ public class Boletim {
 		this.media = 0.0;
 		this.provas = new ArrayList<Prova>();
 	}
+	public Integer getId() {
+		return id;
+	}
 
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	/**
 	 * Aluno do Boletim.
 	 * 
